@@ -1,0 +1,10 @@
+insert into client ( email, phone, address) values (1, 'ddenning0@rakuten.co.jp', '203 869 9949', '29862 Hoffman Way');
+insert into client ( email, phone, address) values (2, 'llongfield1@prnewswire.com', '233 507 9295', '415 Independence Crossing');
+insert into client ( email, phone, address) values (3, 'bdedney2@vk.com', '538 334 6097', '175 Cascade Pass');
+insert into client ( email, phone, address) values (4, 'obraybrookes3@hostgator.com', '363 587 8954', '2 Prentice Avenue');
+insert into client ( email, phone, address) values (5, 'qrourke4@psu.edu', '180 993 0568', '76 Maryland Terrace');
+insert into client ( email, phone, address) values (6, 'dsharman5@bbb.org', '852 470 8339', '563 Granby Road');
+insert into client ( email, phone, address) values (7, 'qdoret6@senate.gov', '694 683 1652', '40 Kedzie Lane');
+insert into client ( email, phone, address) values (8, 'fperrat7@ask.com', '385 204 8252', '2 Manufacturers Pass');
+insert into client ( email, phone, address) values (9, 'lwaylett8@e-recht24.de', '967 818 0839', '03004 Eastlawn Point');
+insert into client ( email, phone, address) values (10, 'dbayford9@usatoday.com', '544 394 8295', '982 Clarendon Parkway');

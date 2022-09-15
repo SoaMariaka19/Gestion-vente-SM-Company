@@ -1,0 +1,10 @@
+insert into seller (firstName, lastName, email) values ('Janeta', 'Yeude', 'jyeude0@europa.eu');
+insert into seller (firstName, lastName, email) values ('Annabella', 'Kaaskooper', 'akaaskooper1@arstechnica.com');
+insert into seller (firstName, lastName, email) values ('Selma', 'Darington', 'sdarington2@apple.com');
+insert into seller (firstName, lastName, email) values ('Coleen', 'Halladey', 'challadey3@discovery.com');
+insert into seller (firstName, lastName, email) values ('Karin', 'Linford', 'klinford4@cnn.com');
+insert into seller (firstName, lastName, email) values ('Kelcy', 'Mabbot', 'kmabbot5@reference.com');
+insert into seller (firstName, lastName, email) values ('Terrell', 'Lockett', 'tlockett6@google.com.br');
+insert into seller (firstName, lastName, email) values ('Kristoffer', 'Doby', 'kdoby7@yellowpages.com');
+insert into seller (firstName, lastName, email) values ('Cchaddie', 'Loseby', 'closeby8@taobao.com');
+insert into seller (firstName, lastName, email) values ('Kessia', 'Gaudin', 'kgaudin9@homestead.com');

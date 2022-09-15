@@ -1,0 +1,10 @@
+insert into supply (name,price, quantity, dateOfselling, availability, id_seller) values ('luminaire',51412.182, 90663.91, '2022-01-06', false, 1);
+insert into supply (name,price, quantity, dateOfselling, availability, id_seller) values ('mobilier',51908.171, 79307.589, '2022-03-09', false, 2);
+insert into supply (name,price, quantity, dateOfselling, availability, id_seller) values ('tapis',61619.807, 77169.219, '2022-01-04', false, 3);
+insert into supply (name,price, quantity, dateOfselling, availability, id_seller) values ('mobilier',98536.357, 85895.085, '2022-03-16', true, 4);
+insert into supply (name,price, quantity, dateOfselling, availability, id_seller) values ('tapis',69025.75, 86425.891, '2022-03-11', true, 5);
+insert into supply (name,price, quantity, dateOfselling, availability, id_seller) values ('luminaire',86074.905, 90570.278, '2022-08-05', true, 6);
+insert into supply (name,price, quantity, dateOfselling, availability, id_seller) values ('mobilier',51109.051, 97077.104, '2021-12-16', false, 7);
+insert into supply (name,price, quantity, dateOfselling, availability, id_seller) values ('tapis',63028.427, 59490.299, '2022-06-12', false, 8);
+insert into supply (name,price, quantity, dateOfselling, availability, id_seller) values ('luminaire',58990.015, 51257.19, '2022-08-01', false, 9);
+insert into supply (name,price, quantity, dateOfselling, availability, id_seller) values ('mobilier',55942.741, 64721.836, '2022-02-10', false, 10);

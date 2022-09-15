@@ -1,0 +1,399 @@
+openapi: '3.0.2'
+info:
+  title: S.M Company API 
+  description: 'This API describes how to manage sale''s company '
+  version: '1.0'
+servers:
+
+  - url: https://api.server.test/v1
+paths:
+  /clients:
+    get:
+      tags:
+        - Clients
+      summary: Get all clients
+      responses:
+        '200':
+          description: List of clients
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Clients'
+        '400':
+          description: Error
+          content: {}
+  
+    put:
+      tags:
+        - Clients
+      summary: Update an existing client
+      requestBody: 
+        description: New client 
+        content:
+          application/json: 
+            schema: 
+              type: array
+              items: 
+                $ref: '#/components/schemas/NewClient'
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema: 
+                type: array
+                items: 
+                  $ref: '#/components/schemas/Clients'
+        '400':
+          description: Error
+          content: {}
+    
+          
+
+  /clients/{id}:
+    get:
+      tags:
+        - Clients
+      summary: Get a specific client
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: The identified client 
+          content:
+            application/json:
+              schema: 
+                type: array
+                items:
+                  $ref: "#/components/schemas/Clients"
+        '400':
+          description: Error
+          content: {}
+
+        
+  /supplies:
+    get:
+      tags:
+        - Supplies
+      summary: Get all supplies
+      responses:
+        '200':
+          description: List of supplies
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Supplies'
+        '400':
+          description: Error
+          content: {}
+    post: 
+      tags:
+        - Supplies 
+      summary: Creates some supplies
+      requestBody:
+        content:
+          application/json:
+            schema: 
+              type: array
+              items:
+                $ref: '#/components/schemas/NewSupply'
+      responses:
+        '200':
+          description: List of new supplies 
+          content:
+            application/json:
+              schema: 
+                type: array
+                items: 
+                  $ref: '#/components/schemas/Supplies'
+    put:
+      tags:
+        - Supplies
+      summary: Update an existing supply
+      requestBody: 
+        description: New supply 
+        content:
+          application/json: 
+            schema: 
+              type: array
+              items: 
+                $ref: '#/components/schemas/NewSupply'
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema: 
+                type: array
+                items: 
+                  $ref: '#/components/schemas/Supplies'
+        '400':
+          description: Error
+          content: {}
+    
+          
+
+  /supplies/{id}:
+    get:
+      tags:
+        - Supplies
+      summary: Get a specific supply
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: The identified supply 
+          content:
+            application/json:
+              schema: 
+                type: array
+                items:
+                  $ref: "#/components/schemas/Supplies"
+        '400':
+          description: Error
+          content: {}
+  
+    delete: 
+      tags:
+        - Supplies
+      summary: Deletes a supply by referring to its id
+      parameters:
+        - name: id
+          in: path 
+          schema: 
+            type: integer
+          required: true
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain:
+              schema: 
+                type: string
+                example: "Returns the id of the deleted supply"
+        '400':
+          description: Error
+          content: {}
+
+  /supplies/quantity:
+      get:
+        tags:
+          - Supplies
+        summary: Get a specific supply by quantity
+        parameters:
+          - name: quantity
+            in: query
+            required: true
+            schema:
+              type: integer
+        responses:
+          '200':
+            description: The identified supply 
+            content:
+              application/json:
+                schema: 
+                  type: array
+                  items:
+                  $ref: "#/components/schemas/Supplies"
+          '400':
+            description: Error
+            content: {}
+
+  /sellers:
+    get:
+      tags:
+        - Sellers
+      summary: Get all sellers
+      responses:
+        '200':
+          description: List of sellers
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Sellers'
+        '400':
+          description: Error
+          content: {}
+    post: 
+      tags:
+        - Sellers 
+      summary: Creates some sellers
+      requestBody:
+        content:
+          application/json:
+            schema: 
+              type: array
+              items:
+                $ref: '#/components/schemas/NewSeller'
+      responses:
+        '200':
+          description: List of new sellers 
+          content:
+            application/json:
+              schema: 
+                type: array
+                items: 
+                  $ref: '#/components/schemas/Sellers'
+    
+    
+          
+
+  /sellers/{id}:
+    get:
+      tags:
+        - Sellers
+      summary: Get a specific seller
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: The identified seller 
+          content:
+            application/json:
+              schema: 
+                type: array
+                items:
+                  $ref: "#/components/schemas/Sellers"
+        '400':
+          description: Error
+          content: {}
+    put:
+      tags:
+        - Sellers
+      summary: Update an existing seller
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema: 
+                type: array
+                items: 
+                  $ref: '#/components/schemas/Sellers'
+        '400':
+          description: Error
+          content: {}
+    delete: 
+      tags:
+        - Sellers
+      summary: Deletes a seller by referring to its id
+      parameters:
+        - name: id
+          in: path 
+          schema: 
+            type: integer
+          required: true
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain:
+              schema: 
+                type: string
+                example: "Returns the id of the deleted seller"
+        '400':
+          description: Error
+          content: {}
+components:
+  schemas:
+    Clients: 
+      type: object
+      properties:
+        id:
+          type: integer
+          example: 1
+        first_name:
+          type: string
+          example: 'Soa Mariaka'
+        last_name:
+          type: string
+          example: 'RAKOTOMALALA'
+        mail:
+          type: string
+          example: 'SoaM@gmail.com'
+        supply: 
+          type: array
+          items:
+           $ref: "#/components/schemas/Supplies"
+
+    Supplies: 
+      type: object
+      properties:
+        id:
+          type: integer
+          example: 1
+        name:
+          type: string
+          example: book
+        price:
+          type: integer
+          example: 7000 Ar
+        quantity(box):
+          type: integer
+          example: 40
+        dateOfselling:
+          type: string
+          format: date
+          example: '2022-03-25'
+        availability:
+          type: boolean
+          example: true
+    NewSupply:
+      type: object
+      properties:
+        id:
+          type: integer
+        name:
+          type: string
+        price:
+          type: integer
+        quantity(box):
+          type: integer
+        dateOfselling:
+          type: string
+          format: date
+        availability:
+          type: boolean
+
+    Sellers: 
+      type: object
+      properties:
+        id:
+          type: integer
+          example: 1
+        first_nameSeller:
+          type: string
+          example: 'Tsiky'
+        last_nameSeller:
+          type: string
+          example: 'ANDRIANOELISON'
+        mailSeller:
+          type: string
+          example: 'Tsiky@gmail.com'
+   
+
+    
